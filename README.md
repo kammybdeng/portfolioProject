@@ -1,2 +1,3 @@
-# portfolioProject
-portfolioProject
+# Portfolio Project 
+
+Initial commit 
