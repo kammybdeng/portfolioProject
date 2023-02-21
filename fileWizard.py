@@ -1,6 +1,6 @@
 import openpyxl
 import pandas as pd
-import pdb
+import constant
 
 class wizardExcel():
 
@@ -12,10 +12,10 @@ class wizardExcel():
         stocks = []
         shares = []
 
-        df = pd.read_excel(self.input_path, sheet_name = 'input_timestamp')
+        df = pd.read_excel(self.input_path, sheet_name = constant.INPUT_SHEETNAME)
         
-        stocks = df['name'].tolist()
-        shares = df['shares'].tolist()
+        stocks = df[constant.INPUT_TICKER_COLM].tolist()
+        shares = df[constant.INPUT_SHARES_COLM].tolist()
                 
         return stocks, shares
 
