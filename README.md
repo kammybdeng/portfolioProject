@@ -8,13 +8,8 @@ A Python program that takes a simple excel file with a list of stock names and s
 - To practice OOP principles, proper storage of private keys, usage of logging, etc
 
 ## Preque and Usage
-Please name your excel sheet as `input_timestamp` with two columns (name, shares) and place the excel file inside this folder. See example below 
+Please name your excel sheet as `input_timestamp` with two columns (name, shares) and place the excel file inside `myFiles` folder. See example in `myFiles` folder.
 
-| name  | shares |
-| ----- | ----- |
-| AAPL  | 20  |
-| TSLA  | 10  |
-| VOO  | 30  |
 
 ### Set up your API key and PYTHONPATH
 Please set up your API Key at [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs/) and set them as your environment variables.
