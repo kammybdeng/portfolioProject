@@ -16,20 +16,19 @@ Please name your excel sheet as `input_timestamp` with two columns (name, shares
 | TSLA  | 10  |
 | VOO  | 30  |
 
-### Set up your API key
+### Set up your API key and PYTHONPATH
 Please set up your API Key at [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs/) and set them as your environment variables.
 
 Run command:
 ```
-export FMPAPIKey={Your API Key}
-export FMPBaseURL='https://financialmodelingprep.com'
+source setup.sh {Your API Key}
 ```
 
 ### Run program
 Finally you can run this program with the command:
 
 ```
-python3 stats.py
+python3 myPortfolio/stats.py
 ```
 
 
@@ -40,7 +39,7 @@ python3 stats.py
 - remove the step to setup API key for easier access
 
 ### Features
+- add NLP model for title sentiment
 - add csv file support
-- add sample ML models for prediction
 - add cryto support 
 

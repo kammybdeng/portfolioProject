@@ -10,8 +10,8 @@ from logger import logger
 
 class StockData():
 
-    baseURL = constant.BASEURL
-    apiKey = constant.APIKEY
+    baseURL = constant.BASE_URL
+    apiKey = constant.API_KEY
 
     def __init__(self, ticker, shares):
         self.ticker = ticker

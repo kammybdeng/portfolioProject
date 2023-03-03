@@ -9,12 +9,19 @@ def main():
 
     wEx = wizardExcel(constant.INPUT_PATH, constant.OUTPUT_PATH)
     stocks, shares = wEx.read()
+    tempList = zip(stocks, shares)
+    stocksList = []
 
 
     print('Your list of stocks and shares:\n')
-    for i, j in zip(stocks, shares):
-        print(i, '\t', j)
-    stocksList = zip(stocks, shares)
+    for i, j in tempList:
+        if j < 0:
+            print('shares cannot be negative. See log')
+            logger.warning(f'Negative share error - Stock: {i} Shares: {j}')
+        else:
+            stocksList.append((i, j))
+            print(i, '\t', j)
+    
 
 
     outputInfo = []
