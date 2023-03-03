@@ -1,0 +1,4 @@
+2023-03-02 19:02:44,106 - example_logger - WARNING - Negative share error - Stock: AAPL Shares: -2.0
+2023-03-02 19:02:45,634 - example_logger - WARNING - Request response is empty: dfadfsad
+2023-03-02 19:25:56,022 - example_logger - WARNING - Negative share error - Stock: AAPL Shares: -2.0
+2023-03-02 19:25:58,570 - example_logger - WARNING - Request response is empty: dfadfsad
