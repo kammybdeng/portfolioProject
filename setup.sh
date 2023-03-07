@@ -12,7 +12,6 @@ ARG_API_KEY=$1
 
 export API_KEY=$ARG_API_KEY
 export BASE_URL='https://financialmodelingprep.com'
-export PYTHONPATH=$(pwd)
 
 ADDED_API_KEY=$(echo $API_KEY)
 

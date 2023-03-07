@@ -11,7 +11,7 @@ A Python program that takes a simple excel file with a list of stock names and s
 Please name your excel sheet as `input_timestamp` with two columns (name, shares) and place the excel file inside `myFiles` folder. See example in `myFiles` folder.
 
 
-### Set up your API key and PYTHONPATH
+### Set up your API key
 Please set up your API Key at [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs/) and set them as your environment variables.
 
 Run command:
