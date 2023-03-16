@@ -1,14 +1,14 @@
 # Portfolio Project 
 
 ## Overview
-A Python program that takes a simple excel file with a list of stock names and shares, then generates a new excel file with current price and other additional information.
+A Python program that takes a simple spreadsheet with a list of stock tickers and shares, then generates a new spreadsheet with current price and other additional information.
 
 ## Motivation
 - To build a tracker that helps organize stocks distributed across different platforms without exposing personal data (since this is a local program without any databases) and get the latest price. Personally, I'm trying to build a similar replica of the portfolio tracker in [Morning Star](https://www.morningstar.com/) to organize my own stocks without exposing my own data :)
 - To practice OOP principles, proper storage of private keys, usage of logging, etc
 
 ## Preque and Usage
-Please name your excel sheet as `input_timestamp` with two columns (name, shares) and place the excel file inside `myFiles` folder. See example in `myFiles` folder.
+Please name your spreadsheet as with two columns (ticker, shares) and place the spreadsheet inside `myFiles` folder. See example in `myFiles` folder.
 
 
 ### Set up your API key
@@ -20,10 +20,10 @@ source setup.sh {Your API Key}
 ```
 
 ### Run program
-Finally you can run this program with the command:
+Run this program with the command:
 
 ```
-python3 myPortfolio/stats.py
+python3 myPortfolio/stats.py --filename {filename}
 ```
 
 

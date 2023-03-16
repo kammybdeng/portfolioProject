@@ -14,7 +14,7 @@ class StockData():
     apiKey = constant.API_KEY
 
     def __init__(self, ticker, shares):
-        self.ticker = ticker
+        self.ticker = ticker.upper()
         self.name = ''
         self.shares = shares
         self.totalVal = 0

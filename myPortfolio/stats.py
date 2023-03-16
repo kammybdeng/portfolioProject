@@ -3,11 +3,30 @@ from fetcher import StockData
 from logger import logger
 import constant
 import formulas
+
+import argparse
+import datetime
+
 import pdb
 
-def main():
 
-    wEx = wizardExcel(constant.INPUT_PATH, constant.OUTPUT_PATH)
+
+
+def main(filename):
+
+    # check extension
+    if filename.endswith('.xlsx'):
+        ext = '.xlsx'
+    elif filename.endswith('.csv'):
+        ext = '.csv'
+    else:
+        print( 'Not a supported file format')
+        return 
+
+    inputPath = constant.FILE_PATH + filename
+    outputPath = constant.FILE_PATH + '_'.join([filename.strip(ext), 'OUTPUT'] + str(datetime.datetime.now().date()).split('-')) + ext
+
+    wEx = wizardExcel(inputPath, outputPath, ext)
     stocks, shares = wEx.read()
     tempList = zip(stocks, shares)
     stocksList = []
@@ -86,4 +105,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(prog='myPortfolio',
+                    description='Create a real-time file with the selected tickers'
+                    )
+    parser.add_argument('--filename', type=str, required=True)
+    args = parser.parse_args()
+
+    main(args.filename)
