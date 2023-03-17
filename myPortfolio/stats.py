@@ -24,6 +24,7 @@ def main(filename):
         return 
 
     inputPath = constant.FILE_PATH + filename
+    # (TO-DO) update timezone to PST
     outputPath = constant.FILE_PATH + '_'.join([filename.strip(ext), 'OUTPUT'] + str(datetime.datetime.now().date()).split('-')) + ext
 
     wEx = wizardExcel(inputPath, outputPath, ext)
@@ -99,7 +100,6 @@ def main(filename):
         print()
         outputInfo.append(infoDict)
 
-        #print(pdb.set_trace())
    
     wEx.write(outputInfo)
 
@@ -108,7 +108,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog='myPortfolio',
                     description='Create a real-time file with the selected tickers'
                     )
-    parser.add_argument('--filename', type=str, required=True)
+    parser.add_argument('--filename', type=str, default='portfolio_test.csv')
     args = parser.parse_args()
 
     main(args.filename)
