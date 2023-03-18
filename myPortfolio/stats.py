@@ -1,12 +1,9 @@
-from fileWizard import wizardExcel
+from fileWizard import fileHandler
 from fetcher import StockData
 from logger import logger
-import constant
 import formulas
 
 import argparse
-import datetime
-
 import pdb
 
 
@@ -14,25 +11,17 @@ import pdb
 
 def main(filename):
 
-    # check extension
-    if filename.endswith('.xlsx'):
-        ext = '.xlsx'
-    elif filename.endswith('.csv'):
-        ext = '.csv'
-    else:
-        print( 'Not a supported file format')
-        return 
 
-    inputPath = constant.FILE_PATH + filename
-    # (TO-DO) update timezone to PST
-    outputPath = constant.FILE_PATH + '_'.join([filename.strip(ext), 'OUTPUT'] + str(datetime.datetime.now().date()).split('-')) + ext
+    myFile = fileHandler(filename)
+    stocks, shares = myFile.read()
 
-    wEx = wizardExcel(inputPath, outputPath, ext)
-    stocks, shares = wEx.read()
+    if not stocks or not shares:
+        return 'No content in file' 
+
     tempList = zip(stocks, shares)
     stocksList = []
 
-
+    
     print('Your list of stocks and shares:\n')
     for i, j in tempList:
         if j < 0:
@@ -101,7 +90,7 @@ def main(filename):
         outputInfo.append(infoDict)
 
    
-    wEx.write(outputInfo)
+    myFile.write(outputInfo)
 
 
 if __name__ == "__main__":
