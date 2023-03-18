@@ -1,18 +1,19 @@
 # Portfolio Project 
 
 ## Overview
-A Python program that takes a simple spreadsheet with a list of stock tickers and shares, then generates a new spreadsheet with current price and other additional information.
+A Python program that takes a spreadsheet with stock tickers and shares to generate a new spreadsheet with latest prices and other information.
 
 ## Motivation
-- To build a tracker that helps organize stocks distributed across different platforms without exposing personal data (since this is a local program without any databases) and get the latest price. Personally, I'm trying to build a similar replica of the portfolio tracker in [Morning Star](https://www.morningstar.com/) to organize my own stocks without exposing my own data :)
-- To practice OOP principles, proper storage of private keys, usage of logging, etc
+- Build a tracker that helps organize stocks distributed across different platforms without exposing personal data (since this is a local program without any databases) and get the latest price. A similar replica of the portfolio tracker in [Morning Star](https://www.morningstar.com/).
+- Practice OOP principles, design patterns, and etc.
+- I'm open to work. Please visit my [LinkedIn](https://www.linkedin.com/in/kammy-deng/) if interested and I'm very happy to receive any feedback on my project.
 
-## Preque and Usage
-Please name your spreadsheet as with two columns (ticker, shares) and place the spreadsheet inside `myFiles` folder. See example in `myFiles` folder.
+## Usage
+Please name the first two columns as (ticker, shares) and place the spreadsheet inside `myFiles` folder. See examples in `myFiles` folder.
 
 
-### Set up your API key
-Please set up your API Key at [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs/) and set them as your environment variables.
+### Get your API key
+Please get your free API Key from [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs/) and run the following command to set up the key as your environment variables.
 
 Run command:
 ```
@@ -25,16 +26,8 @@ Run this program with the command:
 ```
 python3 myPortfolio/stats.py --filename {filename}
 ```
+Please note that to use "filename" instead of the "path", because it assumes you have already put the file inside `myFiles` folder.
 
-
-## TODO
-### Clean ups
-- modify private and public attributes, rename some modules, add argparse to support input params in program
-- add requirement.txt or wrap project in docker
-- remove the step to setup API key for easier access
-
-### Features
-- add NLP model for title sentiment
-- add csv file support
-- add cryto support 
+## Roadmap / Planning
+[Kanban Board](https://www.notion.so/b66f71511b374885bee8aa5e2ddd1566?v=9dc5f1315aaa43a68a3b193c9d5f0d12&pvs=4)
 
