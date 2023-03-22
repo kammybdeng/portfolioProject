@@ -72,7 +72,10 @@ def main(filename):
         except:
             logger.warning(f'{data.ticker}: trailing dividend yield error')
             
-
+        try:
+            data.getNews()
+        except:
+            logger.warning(f'{data.ticker}: news fetching error')
         # forward dividend yield
         # try:
         #     data.forwardDiv = formulas.calForwardDiv(data.lastDiv, data.price)
@@ -101,3 +104,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     main(args.filename)
+
+
+    

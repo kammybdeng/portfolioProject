@@ -5,6 +5,8 @@ import json
 import pdb
 import constant
 from logger import logger
+import sys
+from marketSentiment.search import NewsSearch
 
 
 
@@ -24,6 +26,7 @@ class StockData():
         self.beta = 0
         self.EFT = 'N/A'
         self.industry = 'N/A'
+        self.news = ''
 
         self._profileURL = f"{StockData.baseURL}/api/v3/profile/{self.ticker}?apikey={StockData.apiKey}"
         self._dividendURL = f"{StockData.baseURL}/api/v3/historical-price-full/stock_dividend/{self.ticker}?apikey={StockData.apiKey}"
@@ -82,4 +85,9 @@ class StockData():
             return self.getDict(data)
         else:
             return data
+
+    def getNews(self):
+        ele = NewsSearch(self.ticker)
+        headlines = ele.getTopkNews()
+        self.news = '\n'.join(headlines)
 
