@@ -1,15 +1,12 @@
 # Portfolio Project 
 
 ## Overview
-A Python program that takes a spreadsheet with stock tickers and shares to generate a new spreadsheet with latest prices and other information.
+A Python program that takes a spreadsheet with stock tickers and shares to generate a new spreadsheet with latest prices and other information. A tracker that helps organize stocks distributed across different platforms without exposing personal data (since this is a local program without any databases) and get the latest price. A similar replica of the portfolio tracker in [Morning Star](https://www.morningstar.com/).
 
-## Motivation
-- Build a tracker that helps organize stocks distributed across different platforms without exposing personal data (since this is a local program without any databases) and get the latest price. A similar replica of the portfolio tracker in [Morning Star](https://www.morningstar.com/).
-- Practice OOP principles, design patterns, and etc.
-- I'm open to work. Please visit my [LinkedIn](https://www.linkedin.com/in/kammy-deng/) if interested and I'm very happy to receive any feedback on my project.
+I'm open to work. Please visit my [LinkedIn](https://www.linkedin.com/in/kammy-deng/) if interested and I'm very happy to receive any feedback on my project.
 
 ## Usage
-Please name the first two columns as (ticker, shares) and place the spreadsheet inside `myFiles` folder. See examples in `myFiles` folder.
+Please name the first two columns as (tickers, shares) and place the spreadsheet inside `myFiles` folder. See examples in `myFiles` folder.
 
 
 ### Get your API key
