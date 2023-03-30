@@ -10,11 +10,11 @@ Please name the first two columns as (tickers, shares) and place the spreadsheet
 
 
 ### Get your API key
-Please get your free API Key from [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs/) and run the following command to set up the key as your environment variables.
+Please get your free API Keys from [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs/) and [Serp API](https://serpapi.com/). Then run the following command to set up the key as your environment variables.
 
 Run command:
 ```
-source setup.sh {Your API Key}
+source setup.sh {Financial Modeling Prep API Key} {Serp API Key}
 ```
 
 ### Run program
