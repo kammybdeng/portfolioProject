@@ -25,7 +25,7 @@ class StockData():
         self.forwardDivAmt = 0 
         self.beta = 0
         self.EFT = 'N/A'
-        self.industry = 'N/A'
+        self.sector = 'N/A'
         self.news = ''
 
         self._profileURL = f"{StockData.baseURL}/api/v3/profile/{self.ticker}?apikey={StockData.apiKey}"

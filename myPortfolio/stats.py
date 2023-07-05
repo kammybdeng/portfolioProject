@@ -52,7 +52,7 @@ def main(filename):
         try: #(TO-DO) clean up 
             data.name = profileData[0]['companyName']
             data.price = profileData[0]['price']
-            data.industry = profileData[0]['industry'] if profileData[0]['industry'] else 'N/A'
+            data.sector = profileData[0]['sector'] if profileData[0]['sector'] else 'N/A'
             data.beta = profileData[0]['beta']
             data.EFT = 'Yes' if profileData[0]['isEtf'] else 'No' 
             data.forwardDivAmt = profileData[0]['lastDiv']
